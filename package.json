@@ -2,6 +2,7 @@
   "name": "webpack-live-server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest",
     "start:dev": "webpack serve --env NODE_ENV=development",
