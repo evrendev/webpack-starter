@@ -7,9 +7,11 @@ import path from "path";
 export default (env) => {
   const envFile = env.NODE_ENV ? `.env.${env.NODE_ENV}` : ".env.development";
   return {
-    entry: ["./src/js/index.js", "./src/css/style.scss"],
+    entry: {
+      index: ["./src/js/index.js", "./src/css/index.scss"],
+    },
     output: {
-      filename: "bundle.js",
+      filename: "[name].bundle.js",
       path: path.resolve("dist"),
       publicPath: "/",
       libraryTarget: "umd",
@@ -55,6 +57,7 @@ export default (env) => {
       new HtmlWebpackPlugin({
         template: "./src/index.html",
         filename: "index.html",
+        chunks: ["index"],
       }),
       new CleanWebpackPlugin(),
       new CopyWebpackPlugin({
