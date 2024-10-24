@@ -1,5 +1,7 @@
 import Dotenv from "dotenv-webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 import path from "path";
 
 export default (env) => {
@@ -17,8 +19,13 @@ export default (env) => {
     module: {
       rules: [
         {
+          test: /\.html$/i,
+          loader: "html-loader",
+        },
+        {
           test: /\.js$/,
           exclude: /node_modules/,
+          type: "javascript/auto",
           use: {
             loader: "babel-loader",
             options: {
@@ -27,18 +34,31 @@ export default (env) => {
           },
         },
         {
+          test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+          type: "asset",
+        },
+        {
           test: /\.scss$/,
           use: ["style-loader", "css-loader", "sass-loader"],
         },
       ],
+    },
+    resolve: {
+      alias: {
+        "~": path.resolve("./src"),
+      },
     },
     plugins: [
       new Dotenv({
         path: envFile,
       }),
       new HtmlWebpackPlugin({
-        template: "./index.html",
+        template: "./src/index.html",
         filename: "index.html",
+      }),
+      new CleanWebpackPlugin(),
+      new CopyWebpackPlugin({
+        patterns: [{ from: path.resolve("src/assets"), to: "dist/assets" }],
       }),
     ],
     watch: true,
