@@ -54,11 +54,11 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone <repository-url>
+   git clone https://github.com/evrendev/webpack-starter
    ```
 2. Navigate to the project directory:
    ```sh
-   cd <project-directory>
+   cd webpack-starter
    ```
 3. Install the dependencies:
    ```sh
