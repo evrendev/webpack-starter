@@ -5,7 +5,7 @@ import path from "path";
 export default (env) => {
   const envFile = env.NODE_ENV ? `.env.${env.NODE_ENV}` : ".env.development";
   return {
-    entry: "./src/js/index.js",
+    entry: ["./src/js/index.js", "./src/css/style.scss"],
     output: {
       filename: "bundle.js",
       path: path.resolve("dist"),
@@ -25,6 +25,10 @@ export default (env) => {
               presets: ["@babel/preset-env"],
             },
           },
+        },
+        {
+          test: /\.scss$/,
+          use: ["style-loader", "css-loader", "sass-loader"],
         },
       ],
     },
