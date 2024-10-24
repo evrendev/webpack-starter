@@ -70,7 +70,7 @@ Make sure you have the following installed:
 To start the development server, run:
 
 ```sh
-npm start
+npm run start:dev
 ```
 
 This will start a local server and open the project in your default web browser.
@@ -80,26 +80,10 @@ This will start a local server and open the project in your default web browser.
 To build the project for production, run:
 
 ```sh
-npm run build
+npm run build:prod
 ```
 
 The built files will be output to the `dist` directory.
-
-### Linting
-
-To lint the project files, run:
-
-```sh
-npm run lint
-```
-
-### Formatting
-
-To format the project files, run:
-
-```sh
-npm run format
-```
 
 ## Project Configuration
 
