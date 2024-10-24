@@ -1,0 +1,8 @@
+body,
+html {
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  line-height: var(--spacing-md);
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-dark);
+}
