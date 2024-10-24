@@ -1,0 +1,21 @@
+{
+  "name": "webpack-live-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "js",
+    "live",
+    "server",
+    "webpack",
+    "eslint"
+  ],
+  "author": "Evren Yeniev",
+  "license": "ISC",
+  "description": ""
+}
