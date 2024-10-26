@@ -107,10 +107,6 @@ ESLint is configured in the [`.eslintrc`](.eslintrc) file.
 
 Prettier is configured in the [`.prettierrc`](.prettierrc) file.
 
-### VS Code Settings
-
-VS Code settings are configured in the [`.vscode/settings.json`](.vscode/settings.json) file.
-
 ## License
 
 This project is licensed under the MIT License.
