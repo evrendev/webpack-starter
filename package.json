@@ -4,6 +4,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "lint": "npm run lint:styles; npm run lint:scripts",
+    "lint:styles": "stylelint src",
+    "lint:scripts": "eslint src",
     "test": "jest",
     "start:dev": "webpack serve --env NODE_ENV=development",
     "start:prod": "webpack serve --env NODE_ENV=production",

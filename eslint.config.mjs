@@ -12,6 +12,7 @@ export default [
   {
     languageOptions: {
       globals: globals.browser,
+      ecmaVersion: "latest",
     },
   },
   pluginJs.configs.recommended,
